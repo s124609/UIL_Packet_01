@@ -22,7 +22,7 @@ public class Passcode
             if (pos%2==0 && isVowel(inputChar[pos]))
                 inputChar[pos] = (("" + inputChar[pos]).toUpperCase()).charAt(0);
 
-            //position is prime && consonant
+            //position is prime &&
             if (isPrime(pos) && !isVowel(inputChar[pos]))
             {
                 //lowercase
