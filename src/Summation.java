@@ -12,20 +12,26 @@ public class Summation
 
         do {
             String input = file.nextLine();
+
+            //value constraints
             int start = Integer.parseInt(input.substring(1, input.indexOf(',')));
             int end = Integer.parseInt(input.substring(input.indexOf(',') + 2, input.indexOf(')')));
 
             for (int i = start; i <= end; i++)
             {
+                //simplifies string to an equation
                 String part1 = input.substring(input.indexOf(')') + 3, input.indexOf("x2") + 1);
                 String part2 = input.substring(input.indexOf('+') + 2);
 
+                //replaces 'x' with value
                 part1 = part1.replaceFirst("x","*" + (i*i));
                 part2 = part2.replaceFirst("x", "*" + i);
 
+                //removes spaces and computes
                 String toCompute = part1 + " + " + part2;
                 toCompute = toCompute.replaceAll(" ","");
 
+                //adds the result of every compute
                 output += compute(toCompute);
             }
 
