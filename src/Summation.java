@@ -9,11 +9,11 @@ public class Summation
     {
         Scanner file = new Scanner(new File("summation.dat"));
         Integer output = 0;
+
         do {
             String input = file.nextLine();
             int start = Integer.parseInt(input.substring(1, input.indexOf(',')));
             int end = Integer.parseInt(input.substring(input.indexOf(',') + 2, input.indexOf(')')));
-            //out.println("" + start + " || " + end);
 
             for (int i = start; i <= end; i++)
             {
