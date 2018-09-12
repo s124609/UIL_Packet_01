@@ -21,8 +21,13 @@ public class Passcode
 
             do {
                 //even && vowel
-                if (pos % 2 == 0 && isVowel(inputChar[pos]))
-                    inputChar[pos] = (("" + inputChar[pos]).toUpperCase()).charAt(0);
+                if (pos % 2 == 0 && isVowel(inputChar[pos])) {
+                    if (inputChar[pos] >= 97 && inputChar[pos] <= 122)
+                        inputChar[pos] = (("" + inputChar[pos]).toUpperCase()).charAt(0);
+                    else
+                        inputChar[pos] = (("" + inputChar[pos]).toLowerCase()).charAt(0);
+
+                }
 
                 //prime && consonant
                 if (isPrime(pos) && !isVowel(inputChar[pos])) {
