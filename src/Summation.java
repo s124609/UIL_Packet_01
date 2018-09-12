@@ -38,7 +38,7 @@ public class Summation
             out.println(output);
             output = 0;
 
-        }while(file.hasNextLine());
+        } while (file.hasNextLine());
 
     }
 
