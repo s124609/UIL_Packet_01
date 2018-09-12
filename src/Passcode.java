@@ -29,6 +29,7 @@ public class Passcode
 
                 }
 
+
                 //prime && consonant
                 if (isPrime(pos) && !isVowel(inputChar[pos])) {
                     //lowercase
