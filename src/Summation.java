@@ -15,7 +15,7 @@ public class Summation
 
             //value constraints
             int start = Integer.parseInt(input.substring(1, input.indexOf(',')));
-            int end = Integer.parseInt(input.substring(input.indexOf(',') + 2, input.indexOf(')')));
+            int end = Integer.parseInt(input.substring(input.indexOf(',') + 1, input.indexOf(')')));
 
             for (int i = start; i <= end; i++)
             {
